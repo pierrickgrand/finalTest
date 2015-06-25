@@ -48,9 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BasesCSharpTests.cs" />
+    <Compile Include="Calculatrice.cs" />
     <Compile Include="LinqTests.cs" />
+    <Compile Include="Multiplication.cs" />
     <Compile Include="PatternsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Somme.cs" />
     <Compile Include="TypeReference.cs" />
     <Compile Include="TypeValeur.cs" />
   </ItemGroup>
