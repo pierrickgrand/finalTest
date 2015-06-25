@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 
 namespace FinalTest.Tests
 {
@@ -58,6 +59,17 @@ namespace FinalTest.Tests
             get
             {
                return  _keyValuePairs.Select(pair => pair.Key).First(x=>x.Length>5);
+            }
+        }
+
+        public IEnumerable<int> QuatreNombresSupérieursSuivant3
+        {
+            get
+            {
+                return _keyValuePairs.OrderBy(nombre => nombre.Value)
+                    .Select(pair => pair.Value)
+                    .Where(nombre => nombre > 3)
+                    .Skip(0).Take(4); 
             }
         }
     }
