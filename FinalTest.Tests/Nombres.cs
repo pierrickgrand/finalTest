@@ -52,5 +52,13 @@ namespace FinalTest.Tests
         {
             get { return text_liste(); }
         }
+
+        public string PremierNombreDontLeTexteContientPlusDe5Caractères
+        {
+            get
+            {
+               return  _keyValuePairs.Select(pair => pair.Key).First(x=>x.Length>5);
+            }
+        }
     }
 }
