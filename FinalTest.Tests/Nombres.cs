@@ -24,7 +24,7 @@ namespace FinalTest.Tests
             }
         }
 
-        IEnumerable<int> keep_only_number()
+        IEnumerable<int> keep_only_pair_number()
         {
             return _keyValuePairs.Select(pair => pair.Value).Where(number => is_pair(number));
         }
@@ -35,9 +35,22 @@ namespace FinalTest.Tests
 
             get
             {
-                return keep_only_number();
+                return keep_only_pair_number();
             }
          
+        }
+
+        public string text_liste()
+        {
+            return _keyValuePairs.OrderBy(x => x.Value).Where(number => !is_pair(number.Value))
+                .Select(pair => pair.Key).Aggregate((i, j) => i + ", " + j);
+
+
+        }
+
+        public string TexteNombresImpairs
+        {
+            get { return text_liste(); }
         }
     }
 }
