@@ -1,10 +1,10 @@
 ﻿using System;
+using System.Security.Cryptography.X509Certificates;
 using NFluent;
 using NUnit.Framework;
 
 namespace FinalTest.Tests
 {
-    [TestFixture]
     public class BasesCSharpTests
     {
         [Test]
@@ -13,25 +13,30 @@ namespace FinalTest.Tests
             Check.That(true).IsTrue();
         }
 
-        //[Test]
-        //public void DéfinirUnTypeValeur()
-        //{
-        //    var valeur1 = new TypeValeur(12);
-        //    var valeur2 = new TypeValeur(12);
+        
+        [Test]
+        public void DéfinirUnTypeValeur()
+        {
+            var valeur1 = new TypeValeur(12);
+            var valeur2 = new TypeValeur(12);
 
-        //    Check.That(valeur1).IsEqualTo(valeur2);
-        //    Check.That(typeof(TypeValeur).IsValueType).IsTrue();
-        //}
+            Check.That(valeur1).IsEqualTo(valeur2);
+            Check.That(typeof(TypeValeur).IsValueType).IsTrue();
+            
+        }
 
-        //[Test]
-        //public void DéfinirUnTypeRéférenceAvecEgalitéDeuxInstancesAyantLesMêmesPropriétés()
-        //{
-        //    var valeur1 = new TypeReference(12);
-        //    var valeur2 = new TypeReference(12);
+        [Test]
+        public void DéfinirUnTypeRéférenceAvecEgalitéDeuxInstancesAyantLesMêmesPropriétés()
+        {
+            var valeur1 = new TypeReference(12);
+            var valeur2 = new TypeReference(12);
 
-        //    Check.That(valeur1).IsEqualTo(valeur2);
-        //    Check.That(typeof(TypeReference).IsValueType).IsFalse();
-        //}
+            
+
+            Check.That(valeur1).IsEqualTo(valeur2);
+            Check.That(typeof(TypeReference).IsValueType).IsFalse();
+
+        }
 
         //[Test]
         //public void DéfinirUneClasseRealisantUneMultiplication()

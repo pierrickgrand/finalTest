@@ -51,6 +51,8 @@
     <Compile Include="LinqTests.cs" />
     <Compile Include="PatternsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TypeReference.cs" />
+    <Compile Include="TypeValeur.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
